@@ -1,0 +1,32 @@
+import React from 'react'
+import { Table } from 'react-bootstrap/esm'
+
+const Items = ({produits ,handelClick}) => {
+    const {image,name,songName,price}=produits
+    return (
+        <div>
+            <Table striped bordered hover>
+  <thead>
+      <tr>
+          <th>Image</th>
+          <th> Name</th>
+          <th>Song Name</th>
+          <th> Price</th>
+    
+      </tr>
+    <tr>
+      
+      <td><img style={{width:100}} src={image} alt=""/></td>
+      <td>{name}</td>
+      <td>{songName}</td>
+      <td>{price}</td>
+      <th><button onClick={()=>  handelClick(songName,price)} > bay </button></th>
+    </tr>
+  </thead>
+ 
+  </Table>
+        </div>
+    )
+}
+
+export default Items
