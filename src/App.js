@@ -1,4 +1,5 @@
 
+import Item from 'antd/lib/list/Item';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import AppBarr from './components/AppBarr';
@@ -44,8 +45,10 @@ function App() {
   
   return (
     <div className="App">
+      
    <AppBarr/>
    <ListProd produits={ItemArray}  CLick={handelClick}/>
+   
    <Footer mimi={"XXXtentation"}>
      <h1>this is our page</h1>
      </Footer>
@@ -54,5 +57,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;

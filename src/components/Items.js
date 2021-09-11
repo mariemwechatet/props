@@ -1,10 +1,13 @@
+
 import React from 'react'
 import { Table } from 'react-bootstrap/esm'
+import PropTypes from 'prop-types'; // ES6
 
-const Items = ({produits ,handelClick}) => {
+const Items = ({produits ,handelClick, title}) => {
     const {image,name,songName,price}=produits
     return (
         <div>
+            <h1>{title}</h1>
             <Table striped bordered hover>
   <thead>
       <tr>
@@ -28,5 +31,11 @@ const Items = ({produits ,handelClick}) => {
         </div>
     )
 }
-
+Items.defaultProps = {
+    title: 'this is default prpos '
+  };
 export default Items
+
+Items.propTypes = {
+    
+    handelClick: PropTypes.array}
